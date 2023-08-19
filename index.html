@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="shortcut icon" href="./img/logo@2x.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  mt-5">
+        <div class="container px-5">
+
+        <img class="me-3 nav-img" src="./img/logo@2x.png" alt="Weather">
+
+        <div class="nav-contact">
+            <h1 class="navbar-brand" href="#">Weather</h1>
+            <small>tagline goes here</small>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav   w-50  ms-auto ">
+              <li class="nav-item  ">
+                <a class="nav-link active " aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " aria-current="page" href="#">News</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " aria-current="page" href="#">Live cameras</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " aria-current="page" href="#">Photos</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link " aria-current="page" href="#">Contact</a>
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+    <section class="sec">
+        <div class="weather-img position-relative " ><img src="./img/banner.png" alt="">
+            <div class="form-find">
+                <form  class="find-location">
+                    <input type="text" class="form-text" placeholder="Find your location..." id="search">
+                    <input type="button" value="Find" id="submit">
+                </form>
+    
+            </div>
+
+           
+              <div class="row g-0 weather-box ">
+                <!-- &&&&&& today &&&&&-->
+                <div class="col-lg-4 round backG">
+                  <div  id="toDayDate " class="d-flex justify-content-between toDay-date px-3 w-100 weather-box-today py-2 color-date ">
+                    <span id="toDay-dayName">Saty</span>
+                    <div>
+                      <span id="toDay-dayNum">30</span>
+                      <span id="toDay-Month">may</span>
+                    </div>
+      
+                  </div>
+
+                  <div id="toDay-weather">
+                    <div class="px-3">
+                      <p id="toDay-location">cairo</p>
+                    <span class="fs">
+                      <span id="toDay-temp">20</span>
+                      <span><sup>o</sup>C</span>
+                    </span>
+
+                      <img id="toDayImg" class="toDay-img" src="./img/113.webp" alt="">
+
+                      <p id="toDayText" class="toDay-text">sunny</p>
+                    </div >
+                    <div class="d-flex my-4">
+                      <div class="d-flex me-4 info">
+                        <i class="fa-solid fa-umbrella ps-3"></i>
+                        <p class="ps-2 TDtext" id="humidity"> 20%</p>
+                      </div>
+
+                      <div class="d-flex me-4 info">
+                        <i class="fa-solid fa-wind"></i>
+                        <p class="ps-2 TDtext" id="wind"> 18 km/h</p>
+                      </div>
+
+                      <div class="d-flex info">
+                        <i class="fa-regular fa-compass"></i>
+                        <p class="ps-2 TDtext" id="wind-direction"> East</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <!--&&&&&&& tomorrow&&&&& -->
+                <div class="col-lg-4  backG2">
+                  <div   class="d-flex justify-content-center  color-date  py-2  ">
+                    <span class="tomorrow-dayName ">Saturday</span>
+                  </div>
+
+                  <div id="tomorrow-weather" class="d-flex flex-column align-items-center justify-content-center pt-5 ">
+                    
+
+                      <img  class=" next_condition_img  pb-3" src="./img/113.webp" alt="">
+
+                      <h3 class="pb-3">
+                        <span class="next-max-temp"></span>
+                        <span><sup>o</sup>C</span>
+                      </h3>
+
+                      <h5 class="tempText">
+                        <span class="next_min_temp">15</span>
+                        <span><sup>o</sup> C</span>
+                      </h5>
+                      <p class="toDay-text next-condition-text">sunny</p>
+                   
+                    
+                  </div>
+
+                </div>
+                 <!--&&&&&&& last tomorrow&&&&& -->
+                 <div class="col-lg-4  round2 backG">
+                  <div   class="d-flex justify-content-center  color-date tm-round py-2  ">
+                    <span class="tomorrow-dayName ">Saturday</span>
+                  </div>
+
+                  <div id="tomorrow-weather" class="d-flex flex-column align-items-center justify-content-center pt-5 ">
+                    
+
+                      <img  class="next_condition_img  pb-3" src="./img/113.webp" alt="">
+
+                      <h3 class="pb-3 ">
+                        <span class="next-max-temp"></span>
+                        <span><sup>o</sup>C</span>
+                      </h3>
+
+                      <h5 class="tempText">
+                        <span class="next_min_temp">15</span>
+                        <span><sup>o</sup> C</span>
+                      </h5>
+                      <p class="toDay-text next-condition-text">sunny</p>
+                   
+                    
+                  </div>
+
+                </div>
+
+              </div>
+            
+        </div>
+
+
+    </section>
+
+    <footer class=" foot ">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <form action="#" class="subscribe-form position-relative ">
+              <input type="text" placeholder="Enter your email to subscribe...">
+              <input type="submit" value="Subscribe">
+            </form>
+          </div>
+          <div class="col-md-4">
+            <div class="social-links">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-google-plus"></i></a>
+              <a href="#"><i class="fa-brands fa-pinterest"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <p class=" TDtext">Copyright 2014 Company name. Designed by Themezy. All rights reserved</p>
+      </div>
+    </footer>
+    
+    <script src="./js/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
